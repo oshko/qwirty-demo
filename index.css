@@ -2,8 +2,9 @@ body {
   display: grid;
   margin: 0;
   font-family: "Inter", sans-serif;
+  background-color: azure;
 }
-
+/* NAV BAR */
 nav {
   display: flex;
   justify-content: space-between;
@@ -33,4 +34,58 @@ nav > ul > li:hover {
   cursor: pointer;
   color: #000;
   text-decoration: underline;
+}
+nav > ul > li.menu {
+  display: none;
+}
+@media (max-width: 720px) {
+  nav > ul > li.account {
+    display: none;
+  }
+  nav > ul > li.menu {
+    display: block;
+  }
+}
+
+/* SECTION */
+#search-bar {
+  display: grid;
+  grid-template-columns: 20ch 1fr 20ch;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  margin: 0.2em;
+}
+
+#search-bar > h1 {
+  color: darkcyan;
+}
+#search-bar > form > input {
+  all: unset;
+  text-decoration: none;
+  border-bottom: 1px solid cadetblue;
+}
+
+#search-bar > a {
+  background-color: red;
+  padding: 0.4em;
+  color: aliceblue;
+  font-size: medium;
+}
+
+/* ASIDE */
+aside {
+  margin: 0;
+}
+aside > ul {
+  list-style: none;
+  margin: 0;
+}
+aside > ul > li {
+  background-color: cadetblue;
+}
+#products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
 }
